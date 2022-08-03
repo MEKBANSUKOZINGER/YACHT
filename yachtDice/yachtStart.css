@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@600&display=swap');
+
+body{
+    background-color: rgb(0, 0, 25);
+    height: 100%;
+}
+
+@keyframes titleMove {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes dashMove {
+    0% {
+    }
+
+    100% {
+        width: 0%;
+        margin-left: 35%;
+        background-color: rgb(0, 0, 25);
+        border: none;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.dashOne, .dashTwo, .dashThr {
+    position: absolute;
+    width: 50%;
+    height: 2%;
+    background-color: aqua;
+    border: 3px solid aqua;
+    margin-left: -100%;
+    animation: dashMove 1s ease-in-out forwards;
+}
+
+.dashOne {
+    margin-top: 2.25%;
+}
+
+.dashTwo {
+    margin-top: 4.75%;
+}
+
+.dashThr {
+    margin-top: 7.25%;
+}
+
+.title {
+    width: 100%;
+    font-family: 'Antonio', sans-serif;
+    font-size: 800%;
+    font-style: oblique;
+    text-align: center;
+    color: rgb(0, 0, 25);
+    text-shadow:  -2px 0 aqua, 0 2px aqua, 2px 0 aqua, 0 -2px aqua;
+    animation: titleMove 1s ease-in-out forwards;
+    margin-left: -100%;
+}
+
+.startBtn {
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    animation-delay: 1s;
+    font-size: 400%;
+    font-family: 'Antonio', sans-serif;
+    font-style: oblique;
+    color: aliceblue;
+    margin-top: 10%;
+    transition: all .3s ease-in-out;
+}
+
+.startBtn:hover {
+    color: rgb(223, 174, 21);
+}
